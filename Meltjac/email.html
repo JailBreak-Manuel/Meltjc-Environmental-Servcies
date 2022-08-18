@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email ~ Meltjac Environmental Services</title>
+    <script src="https://kit.fontawesome.com/58ded141c7.js"></script>
+    <link rel="stylesheet" href="style(index & email).css">
+    <link rel="stylesheet" href="common-styles.css">
+    <script src="script.js"></script>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+  emailjs.init("dRe4F3cbYvuGYem49");
+})();
+</script>
+</head>
+<body>
+    <input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+      <header>Menu</header>
+      <!-- <a href="#" class="active">
+        <i class="fas fa-qrcode"></i>
+        <span>Dashboard</span>
+      </a> -->
+      <a href="index.html">
+        <i class="fas fa-stream"></i>
+        <span>Home</span>
+      </a>
+      <a href="services.html"target="_blank">
+        <i class="fas fa-sliders-h"></i>
+        <span>Services</span>
+      </a>
+      <a href="email.html" target="_blank">
+         <i class="fas fa-envelope"></i>
+        <span>Mail</span>
+      </a>
+      <!-- <a href="blog.html"target=_blank>
+        <i class="fa solid fa-blog"></i>
+        <span>Blog</span>
+      </a> -->
+      <a href="about.html"target="_blank">
+        <i class="fa-solid fa-question-circle"></i>
+        <span>About</span>
+      </a>
+    </div>
+    <div class="container">
+        <form  onsubmit="sendEmail();reset(); return false;" >
+            <h3> <i class="fas fa-envelope"></i>GET IN TOUCH</h3>
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <input type="text" id="phone" placeholder="Phone No." required>
+            <textarea id="message" rows="6" placeholder="How may we be of service?"></textarea>
+            <button onClick="SendMail()">Send</button>
+        </form>
+    </div>
+</body>
+</html>
